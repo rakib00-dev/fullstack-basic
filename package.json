@@ -1,0 +1,11 @@
+{
+  "name": "explore-backend-deploy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run start --prefix backend"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
