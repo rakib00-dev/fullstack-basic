@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node api/index.js"
   },
   "keywords": [
     "node",
@@ -12,6 +12,7 @@
     "deploy"
   ],
   "author": "Rakib",
+  "type": "module",
   "license": "ISC",
   "description": "",
   "dependencies": {
