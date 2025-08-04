@@ -2,10 +2,23 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
   const [input, setInput] = useState('');
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await (await fetch('/api/jokes')).json();
+      setData(res);
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(data);
 
   return (
     <>
@@ -18,6 +31,8 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <p>user Name: {data.name}</p>
+      <p>isProgrammer: {data.programmer}</p>
       <div className="card">
         <p>{input}</p>
         <input
