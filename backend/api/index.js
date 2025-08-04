@@ -13,7 +13,7 @@ const port = process.env.PORT || 5001;
 
 console.log(__dirname);
 
-app.use(express.static(__dirname, '../dist'));
+app.use(express.static(path.join(__dirname, '../dist')));
 
 app.get('/', (_, res) => {
   res.send('Hello World!');
